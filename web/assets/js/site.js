@@ -14,42 +14,42 @@ var attribution = 'Dades &#169; Col·laboradors <a href="http://openstreetmap.or
 var tileLayerData = {
     std: {
 	name: 'Estàndard (Mapnik)',
-	url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 	zoom: '19'
     },
     hot: {
 	name: 'Equip Humanitari',
-	url: 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://hot.openstreetmap.org/" target="_blank">Equip Humanitari OpenStreetMap</a>',
 	zoom: '20'
     },
     osmfr: {
 	name: 'OSM França',
-	url: 'http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://openstreetmap.fr/" target="_blank">OpenStreetMap França</a>',
 	zoom: '20'
     },
     cycle: {
 	name: 'Bicicleta',
-	url: 'http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://thunderforest.com/opencyclemap/" target="_blank">ThunderForest</a>',
 	zoom: '18'
     },
     transport: {
 	name: 'Transport públic',
-	url: 'http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://thunderforest.com/transport/" target="_blank">ThunderForest</a>',
 	zoom: '20'
     },
     landscape: {
 	name: 'Paisatge',
-	url: 'http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://thunderforest.com/landscape/" target="_blank">ThunderForest</a>',
 	zoom: '18'
     },
     outdoor: {
 	name: 'A l\'aire lliure',
-	url: 'http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
+	url: 'https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les <a href="http://thunderforest.com/outdoors/" target="_blank">ThunderForest</a>',
 	zoom: '18'
     },
@@ -59,34 +59,34 @@ var tileLayerData = {
 //	attribution: 'Tessel·les <a href="http://lyrk.de/" target="_blank">Lyrk</a>',
 //	zoom: '18'
 //    },
-    mapbox: {
-	name: 'MapBox (satèl·lit)',
-	url: 'http://{s}.tiles.mapbox.com/v3/51114u9.kogin3jb/{z}/{x}/{y}.png',
-	attribution: 'Tessel·les <a href="http://mapbox.com/" target="_blank">MapBox</a>',
-	zoom: '19'
-    },
-    mapquest: {
-	name: 'MapQuest Open',
-	url: 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
-	attribution: 'Tessel·les <a href="http://mapquest.com/" target="_blank">MapQuest</a>',
-	subdomains: '123',
-	zoom: '18'
-    },
-    mapsurfer: {
-	name: 'OpenMapSurfer (3D)',
-	url: 'http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}',
-	attribution: 'Tessel·les <a href="http://giscience.uni-hd.de/" target="_blank">GIScience Research Group @ Heidelberg University</a>',
-	zoom: '19'
-    },
+//    mapbox: {
+//	name: 'MapBox (satèl·lit)',
+//	url: 'https://{s}.tiles.mapbox.com/v3/51114u9.kogin3jb/{z}/{x}/{y}.png',
+//	attribution: 'Tessel·les <a href="http://mapbox.com/" target="_blank">MapBox</a>',
+//	zoom: '19'
+//    },
+//    mapquest: {
+//	name: 'MapQuest Open',
+//	url: 'https://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png',
+//	attribution: 'Tessel·les <a href="http://mapquest.com/" target="_blank">MapQuest</a>',
+//	subdomains: '123',
+//	zoom: '18'
+//    },
+//    mapsurfer: {
+//	name: 'OpenMapSurfer (3D)',
+//	url: 'https://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}',
+//	attribution: 'Tessel·les <a href="http://giscience.uni-hd.de/" target="_blank">GIScience Research Group @ Heidelberg University</a>',
+//	zoom: '19'
+//    },
     toner: {
 	name: 'Tòner',
-	url: 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png',
+	url: 'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les d\'<a href="http://stamen.com" target="_blank">Stamen Design</a>',
 	zoom: '20'
     },
     watercolor: {
 	name: 'Aquarel·la',
-	url: 'http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png',
+	url: 'https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.png',
 	attribution: 'Tessel·les d\'<a href="http://stamen.com" target="_blank">Stamen Design</a>',
 	zoom: '16'
     }
@@ -225,7 +225,7 @@ function addr_search() {
     var inp = document.getElementById("addr");
 
 // +++++ &viewbox=1.9341,41.4200,1.9886,41.3993&bounded=1 --> Coordinates (lat,long) for search box +++++
-    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&viewbox=1.9341,41.4200,1.9886,41.3993&bounded=1&limit=5&q=' + inp.value, function(data) {
+    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&viewbox=1.9341,41.4200,1.9886,41.3993&bounded=1&limit=5&q=' + inp.value, function(data) {
         var items = [];
 
         $.each(data, function(key, val) {
@@ -276,7 +276,7 @@ function chooseAddr2(lat1, lng1, lat2, lng2, osm_type) {
 function addr_search2() {
     var inp = document.getElementById("addr2");
 
-    $.getJSON('http://nominatim.openstreetmap.org/search?format=json&limit=10&q=' + inp.value, function(data) {
+    $.getJSON('https://nominatim.openstreetmap.org/search?format=json&limit=10&q=' + inp.value, function(data) {
         var items = [];
 
         $.each(data, function(key, val) {
